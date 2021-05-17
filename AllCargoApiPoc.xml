@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AllCargoApiPoc</name>
+    </assembly>
+    <members>
+        <member name="M:AllCargoApiPoc.Controllers.LoginController.Login(AllCargoApiPoc.Model.LoginRequest)">
+            <summary>
+            Login to generate Token
+            </summary>
+            
+            <remarks>
+            Sample request:
+            
+               POST api/login
+               
+               body: {
+                "email":  "user1@gmail.com",
+                "password" :  "password"
+                }
+            </remarks>
+            <returns> Jwt Bearer token </returns>
+            <response code="401">UnAuthorize or try again with correct credentils</response>    
+        </member>
+        <member name="M:AllCargoApiPoc.Controllers.SailingSchedulesController.Get(System.String,System.String)">
+            <summary>
+            This api retrieve sailing schedules basis UN Locations or Country Codes or any combination
+            </summary>
+            
+            <remarks>
+            Sample request:
+            
+                GET api/sailing-schedules
+                param:  
+                fromCode = USDAL or US
+                toCode = BEABS or BE
+            </remarks>
+            
+            <returns> Sailing schedule list</returns>
+            <response code="401">UnAuthorize or try again with correct credentils</response> 
+            /// <response code="400">Invalid input</response> 
+        </member>
+    </members>
+</doc>
